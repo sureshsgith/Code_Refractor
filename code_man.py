@@ -35,6 +35,7 @@ Updated test case:
 numArray[]=[4,10,1,55,2];
 
 Include fewer comments for better understanding.
+The Given Code and Response code should not be same , it should be difference above 60% of code
 
     {original_code}
 
