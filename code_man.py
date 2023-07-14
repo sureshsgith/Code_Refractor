@@ -11,26 +11,30 @@ os.environ["OPENAI_API_KEY"]="sk"+"-2zRGrin2jnTtR31xl"+"Fh8T3BlbkFJJjEy9F8"+"clk
 
 
 def generate_code(original_code):
-    prompt="""change the given code to another code with same functionality but change in the variable names and identifiers names
-    note the varaible name and function name should change and rephrase it and also change the position of code snippet like changing the position of functions and more.
-    example:
-    in given code:
-    def swap()
-    def partition()
-    in response code:
-    def partition()
-    def swap()
-    Note: 
-    - you should add the comments with 2 to 4 words by your own,just mention when it important to required.
-    - rewrite the code with less line if possible
-    - you should change the test case with according to problem by your own
-    example:
-    num[]=[5,1,10,4,7];
-    then change to 
-    numArray[]=[4,10,1,55,2];
+    prompt="""
+    Rewrite the given code by changing variable and identifier names while maintaining the same functionality. Also, rephrase and change the position of the code snippet, including the functions.
+Example:
+Given code=
+def swap():
+def partition():
 
-    add less comments for better understanding 
-    
+Response code=
+def partition():
+def swap():
+
+Note:
+
+Add comments (2 to 4 words) .
+Optimize the code by reducing the number of lines if possible.
+Modify the test case according to the problem.
+Example:
+Given test case:
+num[]=[5,1,10,4,7];
+
+Updated test case:
+numArray[]=[4,10,1,55,2];
+
+Include fewer comments for better understanding.
 
     {original_code}
 
