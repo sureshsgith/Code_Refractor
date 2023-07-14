@@ -28,6 +28,8 @@ def generate_code(original_code):
     num[]=[5,1,10,4,7];
     then change to 
     numArray[]=[4,10,1,55,2];
+
+    Note: You must add comments
     
 
     {original_code}
