@@ -8,24 +8,6 @@ st.markdown("<h1 align=center>Code Refractor</h>",unsafe_allow_html=True)
 api_key=st.text_input("Enter OpeaAI Api key")
 os.environ["OPENAI_API_KEY"]=api_key
 
-hum="""
-<style>
-.css-eh5xgm.e1ewe7hr3{
-    visibility: hidden
-}
-</style>
-"""
-
-foot="""
-<style>
-.css-cio0dv.e1g8pov61{
-    visibility: hidden
-}
-</style>
-"""
-
-st.markdown(hum,unsafe_allow_html=True)
-st.markdown(foot,unsafe_allow_html=True)
 
 def generate_code(original_code):
     prompt="""change the given code to another code with same functionality but change in the variable names and identifiers names
