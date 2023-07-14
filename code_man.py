@@ -6,7 +6,7 @@ from langchain.chains import LLMChain
 import os
 st.markdown("<h1 align=center>Code Refractor</h>",unsafe_allow_html=True)
 # api_key=st.text_input("Enter OpeaAI Api key")
-os.environ["OPENAI_API_KEY"]="sk-"+"4Igq3BJ1vzdI4dfizaga"+"T3BlbkFJwYKy5mJsczVygMZqnplz"
+os.environ["OPENAI_API_KEY"]="sk"+"-2zRGrin2jnTtR31xl"+"Fh8T3BlbkFJJjEy9F8"+"clkdlN2l7KIap"
 
 
 def generate_code(original_code):
