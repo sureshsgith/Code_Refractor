@@ -29,14 +29,14 @@ def generate_code(original_code):
     then change to 
     numArray[]=[4,10,1,55,2];
 
-    Note: You must add comments
+    add less comments for better understanding 
     
 
     {original_code}
 
     """
     Final_prompt=PromptTemplate(template=prompt,input_variables=["original_code"])
-    llm=ChatOpenAI(temperature=0.7,model="gpt-3.5-turbo-16k")
+    llm=ChatOpenAI(temperature=0.8,model="gpt-3.5-turbo-16k")
     llm_agent=LLMChain(
         llm=llm,
         prompt=Final_prompt,
@@ -64,3 +64,4 @@ if output_code!="":
     alert.success("Here is your Code...")
     st.caption("Refracted Code:")
     code=st.code(body=output_code,language=lang.lower())
+st.markdown("<footer> by Suresh Rathod</footer>",unsafe_allow_html=True)
