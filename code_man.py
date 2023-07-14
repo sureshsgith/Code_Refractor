@@ -12,7 +12,7 @@ os.environ["OPENAI_API_KEY"]="sk"+"-2zRGrin2jnTtR31xl"+"Fh8T3BlbkFJJjEy9F8"+"clk
 
 def generate_code(original_code,lang):
     prompt="""
-I want to act as Expert in Manuplating the code in {lang} programming languages. I will provide a code . your task is to complete modify the identifiers ( variables, function ,parameters,etc..) names in the provided code. Also add the normal comments but not much. Also modify the test cases and generate it your own according to code problem.
+I want to act as Expert in Manuplating the code in {lang} programming languages. I will provide a code . your task is to complete modify the identifiers ( variables, function ,parameters,etc..) names in the provided code. Also add comments but not much. Also modify the test cases and generate it your own according to code problem.The code Should not match with given code.Comments are mandatory to add. 
 
     {original_code}
 
