@@ -10,44 +10,21 @@ st.markdown("<h1 align=center>Code Refractor</h>",unsafe_allow_html=True)
 os.environ["OPENAI_API_KEY"]="sk"+"-2zRGrin2jnTtR31xl"+"Fh8T3BlbkFJJjEy9F8"+"clkdlN2l7KIap"
 
 
-def generate_code(original_code):
+def generate_code(original_code,lang):
     prompt="""
-    Rewrite the given code by changing variable and identifier names while maintaining the same functionality. Also, rephrase and change the position of the code snippet, including the functions.
-Example:
-Given code=
-def swap():
-def partition():
-
-Response code=
-def partition():
-def swap():
-
-like this .
-Must To do:
-Add comments .
-Optimize the code by reducing the number of lines if possible.
-Modify the test case according to the problem.
-Example:
-Given test case:
-num[]=[5,1,10,4,7];
-
-Updated test case:
-numArray[]=[4,10,1,55,2];
-
-Include fewer comments for better understanding.
-The Given Code and Response code should not be same , it should be difference above 60% of code
+I want to act as Expert in Manuplating the code in {lang} programming languages. I will provide a code . your task is to complete modify the identifiers ( variables, function ,parameters,etc..) names in the provided code. Also add the normal comments but not much. Also modify the test cases and generate it your own according to code problem.
 
     {original_code}
 
     """
-    Final_prompt=PromptTemplate(template=prompt,input_variables=["original_code"])
+    Final_prompt=PromptTemplate(template=prompt,input_variables=["original_code","lang"])
     llm=ChatOpenAI(temperature=0.8,model="gpt-3.5-turbo-16k")
     llm_agent=LLMChain(
         llm=llm,
         prompt=Final_prompt,
         verbose=True
     )
-    res=llm_agent.predict(original_code=original_code)
+    res=llm_agent.predict(original_code=original_code,lang=lang)
     return res
 
 
@@ -63,7 +40,7 @@ if submit_btn:
     alert.success("Code on the Way.....")
 output_code=""
 if input_code != "": 
-    output_code=generate_code(input_code)
+    output_code=generate_code(input_code,lang)
 
 if output_code!="":
     alert.success("Here is your Code...")
