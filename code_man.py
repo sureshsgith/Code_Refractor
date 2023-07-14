@@ -22,9 +22,9 @@ Response code=
 def partition():
 def swap():
 
-Note:
-
-Add comments (2 to 4 words) .
+like this .
+Must To do:
+Add comments .
 Optimize the code by reducing the number of lines if possible.
 Modify the test case according to the problem.
 Example:
@@ -68,4 +68,4 @@ if output_code!="":
     alert.success("Here is your Code...")
     st.caption("Refracted Code:")
     code=st.code(body=output_code,language=lang.lower())
-st.markdown("<footer> by Suresh Rathod</footer>",unsafe_allow_html=True)
+st.markdown("<footer> by Anonymous</footer>",unsafe_allow_html=True)
