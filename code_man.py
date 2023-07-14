@@ -4,6 +4,7 @@ from langchain.chat_models import ChatOpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 import os
+st.markdown("<head> <title> Code Refractor </title></head>",unsafe_allow_html=True)
 st.markdown("<h1 align=center>Code Refractor</h>",unsafe_allow_html=True)
 # api_key=st.text_input("Enter OpeaAI Api key")
 os.environ["OPENAI_API_KEY"]="sk"+"-2zRGrin2jnTtR31xl"+"Fh8T3BlbkFJJjEy9F8"+"clkdlN2l7KIap"
